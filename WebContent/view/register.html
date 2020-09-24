@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-8 col-lg-offset-4 col-md-offset-3 col-sm-offset-2">
+            <div class="register-box">
+                <img src="img/logo.png">
+                <span class="title">在线考试系统</span>
+                <hr>
+            </div>
+            <div class="register-group">
+                <span class="text-comment">用&nbsp;&nbsp;户&nbsp;&nbsp;名</span>
+                <input type="text" ng-model="user.username" ng-blur="checkUsername()">
+                <span ng-bind="usernameTip" class="tip"></span>
+            </div>
+            <div class="register-group">
+                <span class="text-comment">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+                <input type="password" ng-model="user.password">
+                <span ng-bind="passwordTip" class="tip"></span>
+            </div>
+            <div class="register-group">
+                <span class="text-comment">确认密码</span>
+                <input type="password" ng-model="user.confirm">
+                <span ng-bind="confirmTip" class="tip"></span>
+            </div>
+<!--             <div class="register-group">
+                <span class="text-comment">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                <input type="text" ng-model="user.name">
+                <span ng-bind="nameTip" class="tip"></span>
+            </div>
+            <div class="register-group">
+                <span class="text-comment">班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</span>
+                <select ng-model="user.cls" style="width: 200px;height: 30px;">
+                    <option ng-repeat="c in clsList" value="{{c.id}}" ng-bind="c.name"></option>
+                </select>
+                <span ng-bind="nameTip" class="tip"></span>
+            </div> -->
+            <div class="register-group">
+                <span class="text-comment"></span>
+                <!-- <input type="button" value="注册" ng-click="register()"> -->
+            </div>
+            <div class="register-group">
+                <a ui-sref="welcome">返回登录</a>
+            </div>
+        </div>
+    </div>
+</div>

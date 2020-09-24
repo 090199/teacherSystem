@@ -1,0 +1,80 @@
+<!-- <div class="group-item">
+    <span>课程编号</span>
+    <input type="text" ng-model="course.number">
+</div>
+<div class="group-item">
+    <span>课程名称</span>
+    <input type="text" ng-model="course.name">
+</div>
+<div class="group-item">
+    <span>总学时</span>
+    <input type="text" ng-model="course.times">
+</div>
+<div class="group-item">
+    <span>学分</span>
+    <input type="text" ng-model="course.score">
+</div>
+<div class="btn-group-item">
+    <input type="button" class="btn btn-primary btn-sm" value="修改" ng-click="updateCourse()" ng-disabled="unusable">
+    <input type="button" class="btn btn-default btn-sm" value="返回" ng-click="goBack()" ng-disabled="unusable">
+</div> -->
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+	.main{
+		padding:120px;
+	}
+	.form-group{
+		height: 50px;
+		position: relative;
+		margin-bottom: 30px;
+	}
+	.form-group input{
+		position:absolute;
+		top: 20px;
+		left: 160px;
+		width:70%;
+		margin-top: 15px;
+	}
+	form{
+		margin-top: 50px;
+		padding: 20px;
+	}
+	button{
+		margin-left:30px;
+	}
+</style>
+<form>
+  <div class="form-group">
+    <label>课程编号</label>
+    <input type="text" class="form-control" ng-model="course.number">
+  </div>
+
+  <div class="form-group">
+    <label>课程名称</label>
+    <input type="text" class="form-control" ng-model="course.name">
+  </div>
+
+  <div class="form-group">
+    <label>总学时</label>
+    <input type="text" class="form-control" ng-model="course.times">
+  </div>
+  
+    <div class="form-group">
+    <label>学分</label>
+    <input type="text" class="form-control" ng-model="course.score">
+  </div>
+  
+  <div class="form-group">
+  <button class="btn btn-primary btn-sm" ng-click="updateCourse()">修改</button>
+  <button class="btn btn-default btn-sm" ng-click="goBack()">返回</button>
+  	<!-- <input type="button" class="btn btn-primary btn-sm" value="修改" ng-click="updateCourse()" ng-disabled="unusable">
+    <input type="button" class="btn btn-default btn-sm" value="返回" ng-click="goBack()" ng-disabled="unusable"> -->
+  </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

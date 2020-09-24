@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+	.form-group{
+		padding:50px;
+	}
+	form{
+		height: 50px;
+	}
+	table{
+		position: absolute;
+		left: 120px;
+		top:260px;
+	}
+</style>
+<form class="form-inline">
+  <div class="form-group">
+    <label>学生姓名</label>
+    <input type="text" ng-model="search.username" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label>分数段</label>
+    <input type="text" ng-model= "search.from" class="form-control" >~
+    <input type="text" ng-model="search.to" class="form-control" >
+    <button class="btn btn-outline-success my-2 my-sm-0 pull-right btn-primary"  ng-click="searchScore()">Search</button>
+  </div>
+</form>
+
+<table class="table table-stripted table-hover table-border">
+    <thead>
+    <tr>
+        <th>账号</th>
+        <th>课程</th>
+        <th>成绩</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="s in scores">
+        <td ng-bind="s.username"></td>
+        <td ng-bind="s.course"></td>
+        <td ng-bind="s.score"></td>
+        <td>
+        	<!-- 跳转路由时传递参数 -->
+            <a ui-sref="manage.updateScore({score: s})">修改</a>
+            <a ng-click="deleteScore(s.id)">删除</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

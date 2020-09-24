@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+	.form-group{
+		padding:50px;
+	}
+	form{
+		height: 50px;
+	}
+	table{
+		position: absolute;
+		left: 120px;
+		top:260px;
+	}
+</style>
+<form class="form-inline">
+  <div class="form-group">
+    <label>班级</label>
+    <input type="text" ng-model="myClass.className" class="form-control" >
+    <button class="btn btn-outline-success my-2 my-sm-0 pull-right btn-primary"  ng-click="searchStudent()">Search</button>
+  </div>
+</form>
+
+<table class="table table-stripted table-hover table-border">
+    <thead>
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>班级</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="c in classes">
+        <td ng-bind="c.id"></td>
+        <td ng-bind="c.name"></td>
+        <td ng-bind="c.className"></td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
